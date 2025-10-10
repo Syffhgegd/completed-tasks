@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио программиста | Евгений Меркушин</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .container { max-width: 1100px; margin: auto; overflow: hidden; padding: 20px; }
+        header { background-color: #333; color: #fff; padding: 1rem; text-align: center; }
+        nav ul { list-style: none; padding: 0; margin: 0; }
+        nav ul li { display: inline-block; margin-right: 15px; }
+        nav ul li a { color: #fff; text-decoration: none; transition: all 0.3s ease-in-out; }
+        nav ul li a:hover { color: #ffcc00; }
+        main { padding: 20px; background-color: #fff; min-height: calc(100vh - 160px); }
+        article { margin-bottom: 20px; }
+        aside { float: right; width: 25%; background-color: #e9ecef; padding: 10px; height: fit-content; }
+        footer { background-color: #333; color: #fff; text-align: center; padding: 10px; clear: both; }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <h1>Портфолио программиста</h1>
+        <p>Евгений Меркушин — специалист по разработке ПО</p>
+    </header>
+
+    <nav class="container">
+        <ul>
+            <li><a href="#about-me">Обо мне</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="about-me">
+            <h2>Обо мне</h2>
+            <p>Меня зовут Евгений Меркушин, я опытный Python-программист с увлечением машинным обучением и разработкой API-сервисов. Моя страсть к технологиям привела меня к успешной работе над проектами в сферах аналитики данных и автоматизации процессов.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Мои проекты</h2>
+            <article>
+                <h3>API-платформа обработки изображений</h3>
+                <p>Платформа для автоматического распознавания объектов на изображениях с помощью библиотеки TensorFlow и Django REST Framework.</p>
+            </article>
+            
+            <article>
+                <h3>Система рекомендаций фильмов</h3>
+                <p>Проект рекомендательной системы на основе анализа предпочтений пользователей с использованием алгоритмов коллаборативной фильтрации и ML.</p>
+            </article>
+        </section>
+
+        <section id="skills">
+            <h2>Профессиональные навыки</h2>
+            <ul>
+                <li>Python</li>
+                <li>Django</li>
+                <li>TensorFlow/Keras</li>
+                <li>PostgreSQL</li>
+                <li>Git</li>
+            </ul>
+        </section>
+    </main>
+
+    <aside class="container">
+        <h3>Контакты</h3>
+        <address>
+            Email: merkushin.eugene@example.com<br>
+            Телефон: +7 (900) 123-45-67
+        </address>
+    </aside>
+
+    <footer class="container">
+        <p>© Портфолио Евгения Меркушина, 2025</p>
+    </footer>
+</body>
+</html>
