@@ -1,0 +1,117 @@
+/* === Часть 2: Селекторы === */
+
+p {
+    color: #333;
+}
+
+.important {
+    color: red;
+    font-weight: bold;
+}
+
+#site-title {
+    color: blue;
+    font-size: 2.2em;
+    margin: 1rem 0;
+}
+
+.content p {
+    background-color: #f0f8ff;
+    padding: 0.5em;
+}
+
+.content>article {
+    border: 1px solid #ccc;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+h2+p {
+    font-style: italic;
+}
+
+ul li.important {
+    text-decoration: underline;
+}
+
+
+/* === Часть 3: Каскад и специфичность === */
+
+p {
+    color: green;
+    /* переопределяет предыдущее правило */
+}
+
+#site-title {
+    color: purple;
+    /* ID имеет высокую специфичность */
+}
+
+
+/* === Часть 4: Наследование и псевдоэлементы === */
+
+body {
+    color: darkgreen;
+    font-size: 18px;
+}
+
+p {
+    border-left: 4px solid currentColor;
+}
+
+a:hover {
+    color: orange;
+}
+
+li:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.featured-post::before {
+    content: "★ ";
+    color: gold;
+}
+
+.featured-post::after {
+    content: " [важно]";
+    color: crimson;
+    font-size: 0.9em;
+    margin-left: 0.3em;
+}
+
+
+/* === Часть 6: Дополнительно === */
+
+:root {
+    --text-color: #2c3e50;
+    --accent-color: #e74c3c;
+}
+
+body {
+    color: var(--text-color);
+}
+
+.important {
+    color: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+    #site-title {
+        font-size: 1.6em;
+    }
+}
+
+.featured-post {
+    animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
