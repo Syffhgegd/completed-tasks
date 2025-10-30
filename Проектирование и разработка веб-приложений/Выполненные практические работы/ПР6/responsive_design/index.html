@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Адаптивная Верстка</title>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Часть 2.2: Навигация -->
+  <header class="main-header">
+    <div class="container">
+      <h1 class="logo">МойСайт</h1>
+      <button class="mobile-toggle" aria-label="Меню">&#9776;</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Услуги</a></li>
+          <li><a href="#">Портфолио</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Основной контент -->
+  <main class="main-content">
+    <div class="container">
+      <section class="hero">
+        <h2>Адаптивный дизайн — это будущее!</h2>
+        <p>Этот макет корректно отображается на всех устройствах: от десктопов до маленьких смартфонов.</p>
+      </section>
+
+      <!-- Часть 4.1: Адаптивная сетка -->
+      <section class="features">
+        <div class="feature-card">
+          <h3>Гибкость</h3>
+          <p>Используем %, rem и clamp() для плавной адаптации.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Скорость</h3>
+          <p>Минимум кода, максимум эффективности.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Доступность</h3>
+          <p>Контент читаем даже на маленьком экране.</p>
+        </div>
+      </section>
+
+      <!-- Часть 4.2: Адаптивная типографика -->
+      <section class="typography-demo">
+        <h2 style="font-size: clamp(1.5rem, 4vw, 2.5rem);">Адаптивный заголовок</h2>
+        <p style="font-size: clamp(1rem, 2.5vw, 1.2rem);">
+          Этот текст автоматически меняет размер в зависимости от ширины экрана.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Часть 5.2: Футер -->
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 Адаптивный Сайт. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

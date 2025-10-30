@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Grid Практика</title>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Часть 2: Базовая сетка с именованными областями -->
+  <div class="page-grid">
+    <header class="area-header">Шапка сайта</header>
+    <aside class="area-sidebar">Боковая панель</aside>
+    <main class="area-main">
+      <h1>Основной контент</h1>
+      <p>Здесь может быть статья, блог или любой контент.</p>
+
+      <!-- Часть 3.1: Вложенная Grid-галерея -->
+      <section class="gallery">
+        <div class="photo">Фото 1</div>
+        <div class="photo">Фото 2</div>
+        <div class="photo">Фото 3</div>
+        <div class="photo">Фото 4</div>
+        <div class="photo">Фото 5</div>
+        <div class="photo">Фото 6</div>
+      </section>
+    </main>
+    <footer class="area-footer">
+      <!-- Часть 3.2: Grid-футер -->
+      <div class="footer-col">О компании</div>
+      <div class="footer-col">Контакты</div>
+      <div class="footer-col">Политика</div>
+    </footer>
+  </div>
+
+  <!-- Часть 5.1: Эксперимент с grid-template (альтернативный блок) -->
+  <div class="experimental-grid">
+    <div class="exp-item exp-a">A</div>
+    <div class="exp-item exp-b">B</div>
+    <div class="exp-item exp-c">C</div>
+    <div class="exp-item exp-d">D</div>
+  </div>
+
+</body>
+</html>

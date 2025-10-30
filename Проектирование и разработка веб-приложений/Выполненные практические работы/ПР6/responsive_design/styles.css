@@ -1,0 +1,150 @@
+/* styles.css */
+
+/* Часть 2.1: Адаптивный контейнер */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Общие стили */
+.main-header {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem 0;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Основной контент */
+.main-content {
+  padding: 2rem 0;
+}
+.hero h2 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  color: #555;
+}
+
+/* Часть 4.1: Адаптивная сетка */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 3rem 0;
+}
+.feature-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+.feature-card h3 {
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+}
+
+/* Футер */
+.main-footer {
+  background: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: auto;
+}
+
+/* Мобильное меню (скрыто по умолчанию на десктопе) */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Часть 3: Медиа-запросы */
+
+/* Планшеты: 768px – 1024px */
+@media (max-width: 1024px) {
+  .main-nav ul {
+    gap: 1.2rem;
+  }
+  .hero h2 {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+  }
+}
+
+/* Мобильные: до 768px */
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #34495e;
+    padding: 1rem;
+    transform: translateY(-150%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .main-nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Очень маленькие экраны: <480px */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .hero h2 {
+    font-size: clamp(1.4rem, 8vw, 2rem);
+  }
+  .feature-card {
+    padding: 1.2rem;
+  }
+}

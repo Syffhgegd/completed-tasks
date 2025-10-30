@@ -1,0 +1,105 @@
+/* styles.css */
+
+/* Часть 2.2: Основная сетка с именованными областями */
+.page-grid {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  gap: 16px;
+  padding: 16px;
+}
+
+.area-header {
+  grid-area: header;
+  background: #4a6fa5;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.area-sidebar {
+  grid-area: sidebar;
+  background: #d0e1f9;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.area-main {
+  grid-area: main;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Часть 3.1: Вложенная Grid-галерея */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.photo {
+  background: #ffe082;
+  padding: 16px;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Часть 3.2: Grid-футер */
+.area-footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  background: #333;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.footer-col {
+  text-align: center;
+  padding: 8px;
+}
+
+/* Часть 5.1: Эксперимент с grid-template */
+.experimental-grid {
+  display: grid;
+  grid-template:
+    "a a b" 1fr
+    "c d d" 1fr
+    / 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 20px;
+  background: #f0f4f8;
+  margin: 30px 16px;
+  border-radius: 8px;
+}
+
+.exp-item {
+  background: #64b5f6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.exp-a { grid-area: a; }
+.exp-b { grid-area: b; }
+.exp-c { grid-area: c; }
+.exp-d { grid-area: d; }
+
+/* Часть 4.3: Адаптивность — сетка автоматически перестраивается */
+/* Уже реализована через auto-fit + minmax в .gallery и grid-template-areas */

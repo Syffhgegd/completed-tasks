@@ -1,0 +1,113 @@
+/* styles.css */
+
+/* Часть 2.1: Горизонтальное меню */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background-color: #333;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+.navbar a:hover {
+  background-color: #555;
+}
+
+/* Часть 2.2: Карточки в строку */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 15px;
+}
+.card {
+  background: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1;
+  text-align: center;
+}
+
+/* Часть 3.1: Основной макет */
+.main-layout {
+  display: flex;
+  min-height: 300px;
+  gap: 20px;
+  padding: 20px;
+}
+.sidebar {
+  width: 200px;
+  background: #e0e0e0;
+  padding: 15px;
+}
+.content {
+  flex: 1;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+/* Часть 3.2: Футер с равными колонками */
+.footer {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  background: #333;
+  color: white;
+}
+.footer-col {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Часть 4.1: Центрирование блока */
+.centered-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background: #ffeb3b;
+  margin: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Часть 5.1: Эксперимент с order */
+.ordered-container {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  background: #f9f9f9;
+}
+.item {
+  padding: 15px;
+  background: #4caf50;
+  color: white;
+  text-align: center;
+  flex: 1;
+}
+.item-1 { order: 2; }
+.item-2 { order: 1; }
+.item-3 { order: 3; }
+
+/* Часть 4.2: Адаптивность без медиа-запросов */
+@media (max-width: 600px) {
+  .navbar,
+  .cards,
+  .main-layout,
+  .footer,
+  .ordered-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .card, .footer-col, .item, .sidebar, .content {
+    flex: none;
+  }
+}
