@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aсинхронные операции</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Раздел вывода -->
+    <div class="output-container">
+        <h2>Промисы:</h2>
+        <pre id="promise-output"></pre>
+        
+        <h2>Async/Await:</h2>
+        <pre id="async-output"></pre>
+        
+        <h2>Работа с API:</h2>
+        <pre id="api-output"></pre>
+        
+        <h2>Таймеры:</h2>
+        <pre id="timer-output"></pre>
+        
+        <h2>Обработка ошибок:</h2>
+        <pre id="error-output"></pre>
+        
+        <h2>Параллельные операции:</h2>
+        <pre id="parallel-output"></pre>
+        
+        <h2>Реальные сценарии:</h2>
+        <pre id="scenario-output"></pre>
+    </div>
+    
+    <!-- Кнопки запуска -->
+    <button id="basic-promise">Базовый промис</button>
+    <button id="promise-chain">Цепочка промисов</button>
+    <button id="promise-error">Ошибка в промисе</button>
+    <button id="basic-async">Простое async/await</button>
+    <button id="async-error">Обработка ошибки async/await</button>
+    <button id="async-parallel">Параллельное выполнение async/await</button>
+    <button id="fetch-users">Получить пользователей</button>
+    <button id="fetch-post">Отправить пост</button>
+    <button id="fetch-error">Проверить ошибку API</button>
+    <button id="start-interval">Запустить интервал</button>
+    <button id="stop-interval">Остановить интервал</button>
+    <button id="delay-promise">Задержка с промисом</button>
+    <button id="try-catch">Пример try/catch</button>
+    <button id="multiple-errors">Несколько ошибок</button>
+    <button id="retry-pattern">Паттерн повторного запроса</button>
+    <button id="promise-all">Promise.all</button>
+    <button id="promise-race">Promise.race</button>
+    <button id="promise-allSettled">Promise.allSettled</button>
+    <button id="sequential-requests">Последовательные запросы</button>
+    <button id="upload-simulation">Симуляция загрузки</button>
+    <button id="cache-requests">Кэширование запросов</button>
+
+    <script src="async-tasks.js"></script>
+    <script src="async-tests.js"></script>
+</body>
+</html>

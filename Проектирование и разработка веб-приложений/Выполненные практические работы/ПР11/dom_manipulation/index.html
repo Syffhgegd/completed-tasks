@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ПР11: DOM манипуляции</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Практическая работа №11: DOM-манипуляции</h1>
+  </header>
+
+  <main>
+    <section id="target1">
+      <h2>Задание 1: Создание элементов</h2>
+    </section>
+
+    <section id="parent-element" class="parent">
+      <h2>Задание 2: Навигация по DOM</h2>
+      <p>Простой параграф</p>
+      <div class="child">Ребёнок 1</div>
+      <div class="child special">Особый ребёнок</div>
+      <span class="child">Ребёнок 3</span>
+    </section>
+
+    <section>
+      <h2>Задание 3: Стили и классы</h2>
+      <button id="toggle-style">Переключить стиль</button>
+      <div id="style-target">Этот блок меняет стиль</div>
+      <button id="animate-btn">Анимировать</button>
+      <button id="change-color-btn">Сменить цвет заголовка</button>
+    </section>
+
+    <section>
+      <h2>Задание 4: Обработка событий</h2>
+      <button id="click-btn">Кликай!</button>
+      <p>Кликов: <span id="click-counter">0</span></p>
+
+      <input type="text" id="text-input" placeholder="Введите текст">
+      <p>Вы ввели: <span id="input-display">—</span></p>
+    </section>
+
+    <section>
+      <h2>Задание 5: Динамический список</h2>
+      <input type="text" id="item-input" placeholder="Новый элемент списка">
+      <button id="add-item-btn">Добавить</button>
+      <button id="clear-list-btn">Очистить список</button>
+      <ul id="dynamic-list"></ul>
+    </section>
+
+    <section>
+      <h2>Задание 6: Форма</h2>
+      <form id="user-form">
+        <label>Имя:<br><input type="text" name="name" required></label><br><br>
+        <label>Email:<br><input type="email" name="email" required></label><br><br>
+        <label>Возраст:<br><input type="number" name="age" min="1" max="120" required></label><br><br>
+        <button type="submit">Отправить</button>
+      </form>
+      <div id="form-output"></div>
+    </section>
+  </main>
+
+  <script src="dom-tasks.js"></script>
+</body>
+</html>

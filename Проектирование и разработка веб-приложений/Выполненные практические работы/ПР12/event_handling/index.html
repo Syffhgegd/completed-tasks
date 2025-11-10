@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ПР12: Обработка событий</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Практическая работа №12: Обработка событий</h1>
+  </header>
+
+  <main>
+    <!-- Задание 1: Базовые обработчики -->
+    <section>
+      <h2>1. Базовые события</h2>
+      <button id="basic-btn">Нажми меня</button>
+      <div id="basic-output" class="output"></div>
+    </section>
+
+    <section>
+      <h2>Мышь над блоком</h2>
+      <div id="color-box" class="color-box"></div>
+      <div id="mouse-output" class="output">Координаты: —</div>
+    </section>
+
+    <!-- Задание 2: Клавиатура -->
+    <section>
+      <h2>2. События клавиатуры</h2>
+      <input type="text" id="key-input" placeholder="Нажмите клавиши">
+      <div id="key-output" class="output"></div>
+    </section>
+
+    <!-- Задание 3: Делегирование -->
+    <section>
+      <h2>3. Делегирование событий</h2>
+      <button id="add-item-btn">Добавить элемент</button>
+      <ul id="item-list" class="item-list">
+        <li class="item" data-id="1">Элемент 1 <button class="delete">×</button></li>
+        <li class="item" data-id="2">Элемент 2 <button class="delete">×</button></li>
+      </ul>
+      <div id="delegation-output" class="output">Выбрано: 0</div>
+    </section>
+
+    <!-- Задание 4: Предотвращение поведения -->
+    <section>
+      <h2>4. Предотвращение поведения</h2>
+      <a href="https://example.com" id="prevent-link">Ссылка (нажми — не перейдёт)</a><br><br>
+      <form id="prevent-form">
+        <input type="text" name="text" placeholder="Введите что-нибудь" required>
+        <button type="submit">Отправить (не отправит)</button>
+      </form>
+      <div id="prevention-output" class="output"></div>
+    </section>
+
+    <!-- Задание 5: Кастомные события -->
+    <section>
+      <h2>5. Кастомные события</h2>
+      <button id="trigger-custom">Запустить кастомное событие</button>
+      <button id="multiple-listeners">Добавить 3 обработчика</button>
+      <div id="custom-output" class="output"></div>
+    </section>
+
+    <!-- Задание 6: Загрузка и ошибки -->
+    <section>
+      <h2>6. Загрузка изображений</h2>
+      <button id="load-image">Загрузить изображение</button>
+      <button id="load-error">Сымитировать ошибку</button>
+      <div id="loading-output" class="output">Статус: —</div>
+      <div id="image-container"></div>
+    </section>
+
+    <!-- Задание 7: Таймеры и оптимизация -->
+    <section>
+      <h2>7. Таймеры, debounce, throttle</h2>
+      <p>Секундомер: <span id="timer-output">0</span> сек</p>
+      <button id="start-timer">▶ Старт</button>
+      <button id="stop-timer">⏹ Стоп</button>
+
+      <br><br>
+      <button id="debounce-btn">Debounce-кнопка (быстро кликай!)</button>
+      <button id="throttle-btn">Throttle-кнопка (быстро кликай!)</button>
+      <div id="async-output" class="output"></div>
+    </section>
+  </main>
+
+  <script src="events-tasks.js"></script>
+</body>
+</html>
